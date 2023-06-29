@@ -1,0 +1,31 @@
+mixin block-content-2(myImg, t1, t2)
+    hr
+    .block-title
+        if(myImg == '1')
+            img(alt='No image')
+        else
+            img(src = myImg)
+        p=t1
+        .main-title
+            p=t2
+
+// ---
+
+html
+    head
+        include headCode
+        block title
+    body
+        .h1
+            a(href="index.html") General overview
+        .h2
+            a(href="Page_03.html") Gallery
+        .h2
+            a(href="Page_02.html") List of attractions
+        block content
+        .my-block-1
+    .page-footer
+        .fixed-bottom
+            p made by Faishal Kemal
+    footer
+        block footer
